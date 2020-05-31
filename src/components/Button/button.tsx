@@ -26,13 +26,17 @@ export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps>
 
 
 /**
+ * 这是我们的第一个button 组件
  * 
- * import {Button} from 'kwf'
+ * `import {Button} from 'kwf'`
  */
-const Button: React.FC<BaseButtonProps> = (props) =>{
+export const Button: React.FC<BaseButtonProps> = (props) =>{
   const {
+    /**设置Button 类型 */
     btnType,
+    /**设置Button 禁用 */
     disabled,
+    /**设置Button 大小 */
     size,
     children,
     href,

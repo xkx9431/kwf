@@ -19,15 +19,16 @@ interface BaseButtonProps {
   btnType?:ButtonType;
   children: React.ReactNode;
   href ?: string;
+  onClick?:any;
 }
-type NativeButtonProps = BaseButtonProps& ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps& AnchorHTMLAttributes<HTMLElement>
-export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps>
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 
 /**
  * 这是我们的第一个button 组件
- * 
+ *
  * `import {Button} from 'kwf'`
  */
 export const Button: React.FC<BaseButtonProps> = (props) =>{
@@ -54,7 +55,7 @@ export const Button: React.FC<BaseButtonProps> = (props) =>{
       {...restProps}
       className = {classes}>
         {children}
-    </a>    
+    </a>
     )
   }else{
     return(

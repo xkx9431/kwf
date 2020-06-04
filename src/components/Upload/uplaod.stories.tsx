@@ -7,6 +7,8 @@ const SimpleUpload = ()=>{
     return(
         <Upload
             action = "http://jsonplaceholder.typicode.com/posts/"
+            onChange={action('changed')}
+            onRemove={action('removed')}
         />
     )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import pageBadges from "../../utils/pageBages";
 
 interface PaginatorProps {
@@ -13,14 +13,14 @@ interface PaginatorProps {
 /**
  * Paginator component
  */
-export function Paginator(options:PaginatorProps) {
+const Paginator: FC<PaginatorProps> = ( props )=> {
     const {
         currentPage,
         itemsPerPage,
         maxItems = Infinity,
         onChangePage,
         total
-    } = options;
+    } = props;
     const numItems = Math.min(total, maxItems - itemsPerPage);
     const pages = Math.ceil(numItems / itemsPerPage);
 

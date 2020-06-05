@@ -13,7 +13,7 @@ interface PaginatorProps {
 /**
  * Paginator component
  */
-export default function Paginator(options:PaginatorProps) {
+export function Paginator(options:PaginatorProps) {
     const {
         currentPage,
         itemsPerPage,
@@ -65,3 +65,5 @@ export default function Paginator(options:PaginatorProps) {
         </nav>
     );
 }
+
+export default Paginator;

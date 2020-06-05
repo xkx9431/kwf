@@ -17,7 +17,7 @@ const Paginator: FC<PaginatorProps> = ( props )=> {
     const {
         currentPage,
         itemsPerPage,
-        maxItems = Infinity,
+        maxItems = 1000,
         onChangePage,
         total
     } = props;

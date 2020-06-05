@@ -1,6 +1,5 @@
 import React, {useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 import Paginator from './pageinator'
 
 
@@ -16,11 +15,9 @@ const PaginatorSample = ()=>{
   const MAX_ITEMS_PER_PAGE = 10;
   
   const [currentPage, setCurrentPage] = useState(1);
-  const lastIndex = MAX_ITEMS_PER_PAGE * currentPage;
-  const firstIndex = lastIndex - MAX_ITEMS_PER_PAGE;
   return(
     <Paginator
-    total={90}
+    total={list.length}
     currentPage={currentPage}
     itemsPerPage={MAX_ITEMS_PER_PAGE}
     onChangePage={ (page:number) => {
